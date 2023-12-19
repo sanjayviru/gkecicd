@@ -5,13 +5,13 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/${_PROJECT_ID}/${_IMAGE_NAME}:${SHORT_SHA}', '.']
   env:
-    - '_PROJECT_ID=friendly-folio-408616'
-    - '_IMAGE_NAME=cicd-image'
+    - 'PROJECT_ID=friendly-folio-408616'
+    - 'IMAGE_NAME=cicd-image'
     - 'SHORT_SHA=v1.0'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/${_PROJECT_ID}/${_IMAGE_NAME}:${SHORT_SHA}']
+  args: ['push', 'gcr.io/${PROJECT_ID}/${IMAGE_NAME}:${SHORT_SHA}']
   env:
-    - '_PROJECT_ID=friendly-folio-408616'
-    - '_IMAGE_NAME=cicd-image'
+    - 'PROJECT_ID=friendly-folio-408616'
+    - 'IMAGE_NAME=cicd-image'
     - 'SHORT_SHA=v1.0'
