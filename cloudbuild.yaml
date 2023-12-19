@@ -10,4 +10,4 @@ steps:
   substitutions:
     _PROJECT_ID: friendly-folio-408616
     _IMAGE_NAME: cicd-image
-    _SHORT_SHA: $SHORT_SHA
+    _SHORT_SHA: v1.0
