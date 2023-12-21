@@ -7,4 +7,3 @@ steps:
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/${_PROJECT_ID}/${_IMAGE_NAME}:${SHORT_SHA}']
- 
